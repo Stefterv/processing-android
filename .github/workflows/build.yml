@@ -30,7 +30,10 @@ jobs:
         uses: android-actions/setup-android@v3
 
       - name: Build with Gradle
-        run: ./processing/gradlew dist
+        
+        run: |
+          cd processing
+          ./gradlew dist
       # - name: Add artifact
       #   uses: actions/upload-artifact@v4
       #   with:
