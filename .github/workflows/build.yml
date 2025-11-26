@@ -32,11 +32,15 @@ jobs:
           packages: 'tools platform-tools platforms;android-33'
 
       - name: Build with Gradle
-        
+        run: |
+          echo sdk.dir=/usr/local/lib/android/sdk/ >> local.properties
+          ./gradlew build
+
+      - name: Create the mode
         run: |
           cd processing
           echo sdk.dir=/usr/local/lib/android/sdk/ >> local.properties
-          ./gradlew build dist
+          ./gradlew dist
       # - name: Add artifact
       #   uses: actions/upload-artifact@v4
       #   with:
