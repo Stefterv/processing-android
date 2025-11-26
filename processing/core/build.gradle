@@ -64,7 +64,7 @@ tasks.named('compileJava').configure {
     doFirst {
         String[] deps = ["wearable.jar"]
         deps.each { fn ->
-            Files.copy(file("${rootDir}/core/build/libs/${fn}").toPath(),
+            Files.copy(file("${rootDir}/build/libs/${fn}").toPath(),
                     file("${rootDir}/mode/mode/${fn}").toPath(), REPLACE_EXISTING)
         }
     }
