@@ -16,11 +16,13 @@ runs:
       uses: android-actions/setup-android@v3
 
     - name: Build with Gradle
+      shell: bash
       run: |
         echo sdk.dir=/usr/local/lib/android/sdk/ >> local.properties
         ./gradlew libs:processing-core:build
 
     - name: Create the mode
+      shell: bash
       run: |
         cd processing
         echo sdk.dir=/usr/local/lib/android/sdk/ >> local.properties
