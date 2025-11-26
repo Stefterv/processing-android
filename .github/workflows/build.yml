@@ -28,6 +28,8 @@ jobs:
 
       - name: Setup Android SDK
         uses: android-actions/setup-android@v3
+        with:
+          packages: 'tools platform-tools build-tools-33.0.2 platforms;android-33'
 
       - name: Build with Gradle
         
