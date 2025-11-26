@@ -64,6 +64,7 @@ tasks.named('clean').configure {
 }
 
 tasks.named('compileJava').configure {
+    dependsOn(tasks.named("extractAarJars"))
     doFirst {
         String[] deps = ["wearable.jar"]
         deps.each { fn ->
