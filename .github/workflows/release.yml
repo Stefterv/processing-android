@@ -46,5 +46,5 @@ jobs:
         env:
           GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         with:
-          title: Release Android Mode 
+          title: Release Android Mode ${{ github.event.inputs.version_number }} (${{ github.event.inputs.version_pretty }})
           prerelease: true
