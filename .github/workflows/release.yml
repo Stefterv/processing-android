@@ -28,7 +28,7 @@ jobs:
           VERSION_PRETTY=${{ github.event.inputs.version_pretty }}
           echo "Setting version to $VERSION_NUMBER ($VERSION_PRETTY)"
           sed -i "s/^version=.*$/version=$VERSION_NUMBER/" ./processing/mode/mode.properties
-          sed -i "s/^vprettyVersion=.*$/prettyVersion=$VERSION_PRETTY/" ./processing/mode/mode.properties
+          sed -i "s/^prettyVersion=.*$/prettyVersion=$VERSION_PRETTY/" ./processing/mode/mode.properties
           cat ./processing/mode/mode.properties
    
       - name: Setup and Build Android Mode
