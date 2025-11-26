@@ -32,7 +32,7 @@ jobs:
       - name: Build with Gradle
         run: |
           echo sdk.dir=/usr/local/lib/android/sdk/ >> local.properties
-          ./gradlew build
+          ./gradlew libs:processing-core:build libs:processing-ar:build libs:processing-vr:build
 
       - name: Create the mode
         run: |
