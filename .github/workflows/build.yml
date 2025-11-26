@@ -38,7 +38,7 @@ jobs:
         run: |
           cd processing
           echo sdk.dir=/usr/local/lib/android/sdk/ >> local.properties
-          ./gradlew extractAarJars dist
+          ./gradlew core:extractAarJars dist
       # - name: Add artifact
       #   uses: actions/upload-artifact@v4
       #   with:
