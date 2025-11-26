@@ -33,6 +33,7 @@ jobs:
         
         run: |
           cd processing
+          echo sdk.dir=/usr/local/lib/android/sdk/ >> local.properties
           ./gradlew dist
       # - name: Add artifact
       #   uses: actions/upload-artifact@v4
