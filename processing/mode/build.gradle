@@ -21,7 +21,7 @@ dependencies {
 
     implementationExtract "org.eclipse.jdt:org.eclipse.jdt.debug:${jdtVersion}"
 
-    implementationCopy "org.gradle:gradle-tooling-api:${toolingVersion}"
+    implementation "org.gradle:gradle-tooling-api:${toolingVersion}"
     implementationCopy "org.slf4j:slf4j-api:${slf4jVersion}"
     implementationCopy "org.slf4j:slf4j-simple:${slf4jVersion}"
 
